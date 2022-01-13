@@ -12,10 +12,15 @@
 
 html, body {
   color: var(--white);
-  font: var(--body2-bold);
+  font: var(--body2-regular);
   background-color: var(--bg);
   height: 100%;
   font-size: 100%;
+}
+
+.bold{
+  font: var(--body1-bold);
+  margin-right: 10px;
 }
 
 .container{
@@ -27,4 +32,21 @@ html, body {
 
 .container__content{
   border: 1px solid white;
+  display: flex;
+  padding: 24px;
+}
+
+.image__profile{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 24px;
+}
+
+.container__tweet{
+  width: 650px;
+}
+
+.content__subtitle{
+  color: var(--grey);
 }
