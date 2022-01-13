@@ -12,7 +12,7 @@
 
 html, body {
   color: var(--white);
-  font: var(--body2-regular);
+  font: var(--body1-regular);
   background-color: var(--bg);
   height: 100%;
   font-size: 100%;
@@ -37,8 +37,8 @@ html, body {
 }
 
 .image__profile{
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   margin-right: 24px;
 }
@@ -49,4 +49,55 @@ html, body {
 
 .content__subtitle{
   color: var(--grey);
+}
+
+.container--upload{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  border: 1px solid var(--white);
+  border-radius: 20px;
+  height: 135px;
+  margin-bottom: 20px;
+}
+
+.upload__image{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.container__text__upload{
+  padding: 10px;
+}
+
+.container__text__parrafo, .text__alternative{
+  color: var(--grey);
+}
+
+.icon{
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.icon__like--actived{
+  color: red;
+  display: none;
+}
+
+.text__alternative{
+  display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 800px) {
+  .container__content{
+    width: 90%;
+  }
+  .container__text__parrafo{
+    display: none;
+  }
+  .text__alternative{
+    display: block;
+  }
 }

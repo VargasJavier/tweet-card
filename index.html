@@ -24,19 +24,39 @@
         </div>
         <p class="container__parrafo">Los retos de esta semana de /Proyectos son totalmente gratis, crea una sección de pricing y una galería de fotos. Puedes hacer en 100% solo con HTML y CSS</p>
         <div class="container--upload">
-          <img src="" alt="Miniatura de imagen">
+          <img class="upload__image" src="" alt="Miniatura de imagen">
           <div class="container__text__upload">
             <span>Grig Gallery</span>
-            <p>Practica tus habilidades de Grid CSS con este ejercicio de las capitales del mundo.</p>
+            <p class="container__text__parrafo">Practica tus habilidades de Grid CSS con este ejercicio de las capitales del mundo.</p>
+            <p class="text__alternative">leonidasesteban.com</p>
           </div>
         </div>
         <div class="container__like">
-          <ion-icon class="icon__like" name="heart-outline"></ion-icon>
-          <ion-icon class="icon__like--actived" name="heart"></ion-icon>
-          <span class="count__like">152</span>
+          <ion-icon onclick="darLike()" id="corazon" class="icon icon__like" name="heart-outline"></ion-icon>
+          <ion-icon onclick="quitarLike()" id="corazon_rojo" class="icon icon__like--actived" name="heart"></ion-icon>
+          <span id="count__likes" class="count__like">152</span>
         </div>
       </div>
     </div>
   </div>
+  <script>
+    let heart = document.getElementById("corazon");
+    let heartRed = document.getElementById("corazon_rojo");
+    let contador = document.getElementById("count__likes");
+    function darLike(){
+      if(heart.style.display !== "none") {
+        heart.style.display = "none";
+        heartRed.style.display = "inline-block";
+        contador.innerHTML = 153;
+      }
+    }
+    function quitarLike(){
+      if(heartRed.style.display !== "none") {
+        heartRed.style.display = "none";
+        heart.style.display = "inline-block";
+        contador.innerHTML = 152;
+      }
+    }
+  </script>
 </body>
 </html>
