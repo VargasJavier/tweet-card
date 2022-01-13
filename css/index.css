@@ -1,0 +1,30 @@
+:root { 
+  --white: #ffffff; 
+  --bg: #000000; 
+  --blue: #2797dd; 
+  --grey: #6e767d; 
+  --pink: #f72381; 
+  --body1-regular: 400 1rem/1.75rem Poppins; 
+  --body1-bold: 700 1rem/1.75rem Poppins; 
+  --body2-bold: 700 0.75rem/1.5rem Poppins; 
+  --body2-regular: 400 0.75rem/1.375rem Poppins;   
+}
+
+html, body {
+  color: var(--white);
+  font: var(--body2-bold);
+  background-color: var(--bg);
+  height: 100%;
+  font-size: 100%;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container__content{
+  border: 1px solid white;
+}
